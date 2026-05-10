@@ -5,7 +5,7 @@ import { INITIAL_Z_INDEX } from "#constants";
 
 const useWindowStore = create(immer((set) => ({
     windows: WINDOW_CONFIG,
-    nextZindex: INITIAL_Z_INDEX + 1,
+    nextZIndex: INITIAL_Z_INDEX + 1,
 
     openWindow: (windowKey, data = null) => set((state) => {
         const win = state.windows[windowKey];
