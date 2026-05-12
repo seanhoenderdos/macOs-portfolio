@@ -123,6 +123,7 @@ Dark remains the default because the current portfolio is visually designed arou
 ### Task 1: Theme Helper Module
 
 **Files:**
+
 - Create: `src/theme/theme.js`
 - Test: `src/theme/theme.test.mjs`
 
@@ -274,10 +275,7 @@ export const readStoredTheme = (storage = globalThis.localStorage) => {
   }
 }
 
-export const writeStoredTheme = (
-  theme,
-  storage = globalThis.localStorage,
-) => {
+export const writeStoredTheme = (theme, storage = globalThis.localStorage) => {
   if (!isTheme(theme)) return
 
   try {
@@ -330,6 +328,7 @@ git commit -m "feat: add theme helpers"
 ### Task 2: Theme Store And Test Script
 
 **Files:**
+
 - Create: `src/store/theme.js`
 - Modify: `package.json`
 
@@ -423,6 +422,7 @@ git commit -m "feat: add persisted theme store"
 ### Task 3: Desktop And Mobile Theme Toggles
 
 **Files:**
+
 - Modify: `src/components/Navbar.jsx`
 - Modify: `src/mobile/MobileStatusBar.jsx`
 - Modify: `src/index.css`
@@ -534,19 +534,19 @@ export default MobileStatusBar
 In `src/index.css`, inside the existing `@layer components` block, add:
 
 ```css
-  .theme-toggle,
-  .mobile-theme-toggle {
-    @apply flex items-center justify-center rounded border-0 bg-transparent p-0 text-inherit;
-  }
+.theme-toggle,
+.mobile-theme-toggle {
+  @apply flex items-center justify-center rounded border-0 bg-transparent p-0 text-inherit;
+}
 
-  .theme-toggle {
-    @apply size-6;
-  }
+.theme-toggle {
+  @apply size-6;
+}
 
-  .mobile-theme-toggle {
-    @apply size-7;
-    color: var(--mobile-text);
-  }
+.mobile-theme-toggle {
+  @apply size-7;
+  color: var(--mobile-text);
+}
 ```
 
 - [ ] **Step 4: Run lint**
@@ -573,6 +573,7 @@ git commit -m "feat: add theme toggles"
 ### Task 4: CSS Theme Tokens
 
 **Files:**
+
 - Modify: `src/index.css`
 
 - [ ] **Step 1: Add root token definitions**
@@ -759,6 +760,7 @@ git commit -m "feat: add theme tokens"
 ### Task 5: Desktop Windows Markup And CSS Migration
 
 **Files:**
+
 - Modify: `src/index.css`
 - Modify: `src/windows/Finder.jsx`
 - Modify: `src/windows/Terminal.jsx`
@@ -1096,6 +1098,7 @@ git commit -m "feat: theme desktop windows"
 ### Task 6: Mobile CSS Migration
 
 **Files:**
+
 - Modify: `src/index.css`
 
 - [ ] **Step 1: Replace mobile shell and home colors**
@@ -1290,6 +1293,7 @@ git commit -m "feat: theme mobile screens"
 ### Task 7: Visual Verification
 
 **Files:**
+
 - Verify: `src/index.css`
 - Verify: `src/components/Navbar.jsx`
 - Verify: `src/mobile/MobileStatusBar.jsx`
@@ -1309,6 +1313,7 @@ Expected: Vite prints a local URL, usually `http://127.0.0.1:5173/`.
 Open `http://127.0.0.1:5173/` at `1440x900`.
 
 Expected:
+
 - `document.documentElement.dataset.theme` is `dark` on first load when no stored theme exists and the system preference is not light.
 - The dark wallpaper is visible.
 - Navbar, dock, welcome text, desktop icons, all open windows, and window controls remain legible.
@@ -1319,6 +1324,7 @@ Expected:
 Click the mode icon in the desktop navbar.
 
 Expected:
+
 - `document.documentElement.dataset.theme` changes to `light`.
 - `localStorage.getItem('sean-portfolio-theme')` returns `light`.
 - The light wallpaper is visible.
@@ -1329,6 +1335,7 @@ Expected:
 Open `http://127.0.0.1:5173/` at `390x844`.
 
 Expected:
+
 - Home, status bar, dock, Finder, Gallery, Safari, Resume, Contact, Terminal, text file, and preview screens use the selected theme.
 - The mobile status bar theme button toggles the theme.
 - The theme persists after reload.
@@ -1352,6 +1359,7 @@ If visual verification required no CSS adjustments, do not create an empty commi
 ### Task 8: Final Verification
 
 **Files:**
+
 - Verify all changed files.
 
 - [ ] **Step 1: Run the full validation suite**
@@ -1366,6 +1374,7 @@ npm run format:check
 ```
 
 Expected:
+
 - `npm test`: PASS.
 - `npm run lint`: PASS.
 - `npm run build`: PASS.
@@ -1381,6 +1390,7 @@ git status --short
 ```
 
 Expected:
+
 - `git diff --check`: no whitespace errors.
 - `git status --short`: only intended theme implementation files are modified or newly added.
 

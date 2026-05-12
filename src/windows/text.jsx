@@ -19,7 +19,7 @@ const Text = () => {
         <h2>{name}</h2>
       </div>
 
-      <article className="p-5 space-y-6 overflow-y-auto max-h-[calc(100dvh-12rem)]">
+      <article className="text-file-content">
         {previewImage && (
           <img
             src={previewImage}
@@ -28,20 +28,16 @@ const Text = () => {
           />
         )}
 
-        {subtitle && (
-          <p className="text-sm font-semibold text-gray-500">{subtitle}</p>
-        )}
+        {subtitle && <p className="text-file-subtitle">{subtitle}</p>}
 
         <div className="space-y-6">
           {sections.map((section, sectionIndex) => (
             <section key={section.title ?? sectionIndex} className="space-y-3">
               {section.title && (
-                <h3 className="text-xs font-bold uppercase tracking-[0.08em] text-gray-500">
-                  {section.title}
-                </h3>
+                <h3 className="text-file-section-title">{section.title}</h3>
               )}
               {section.paragraphs.map((paragraph, paragraphIndex) => (
-                <p key={paragraphIndex} className="text-sm leading-6">
+                <p key={paragraphIndex} className="text-file-paragraph">
                   {paragraph}
                 </p>
               ))}
