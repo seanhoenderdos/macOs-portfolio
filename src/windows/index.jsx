@@ -4,5 +4,6 @@ import Resume from './Resume'
 import Finder from './Finder'
 import Text from './text'
 import Image from './image'
+import Photos from './Photos'
 
-export { Terminal, Safari, Resume, Finder, Text, Image }
+export { Terminal, Safari, Resume, Finder, Text, Image, Photos }

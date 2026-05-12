@@ -1,21 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-@import "tailwindcss";
+@import 'tailwindcss';
 
 html,
 body {
   width: 100dvw;
   overflow: hidden;
   height: 100dvh;
-  background-image: url("/images/wallpaper.png");
+  background-image: url('/images/wallpaper.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 @theme {
-  --font-georama: "Georama", sans-serif;
-  --font-roboto: "Roboto Mono", monospace;
+  --font-georama: 'Georama', sans-serif;
+  --font-roboto: 'Roboto Mono', monospace;
   --breakpoint-3xl: 1920px;
 }
 
@@ -33,7 +33,11 @@ body {
 
 @layer base {
   main {
-    @apply w-dvw h-dvh overflow-hidden;
+    @apply relative w-dvw h-dvh overflow-hidden;
+  }
+
+  .desktop-app {
+    @apply block max-sm:hidden;
   }
 
   nav {
@@ -304,6 +308,10 @@ body {
         @apply font-bold text-sm text-center flex-1;
       }
     }
+
+    .resume-document {
+      @apply bg-[#000417];
+    }
   }
 
   #finder {
@@ -334,24 +342,24 @@ body {
     }
 
     .content {
-      @apply flex-1 p-8 bg-white max-w-2xl relative;
+      @apply flex-1 p-8 bg-white max-w-2xl min-h-[30rem] max-h-[70vh] overflow-auto relative;
 
       li {
-        @apply absolute flex items-center flex-col gap-3;
+        @apply absolute flex w-32 items-center flex-col gap-3;
 
         img {
-          @apply object-contain object-center size-16 relative group-hover:scale-105;
+          @apply object-contain object-center size-20 relative group-hover:scale-105;
         }
 
         p {
-          @apply text-sm text-center font-medium w-40;
+          @apply text-sm text-center font-medium w-full break-words leading-tight;
         }
       }
     }
   }
 
   #txtfile {
-    @apply w-md absolute top-36 right-32 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-md max-w-[calc(100dvw-3rem)] absolute top-12 right-32 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
@@ -391,6 +399,296 @@ body {
           @apply text-sm text-white text-center px-1 rounded-md group-hover:bg-blue-500 transition-colors max-w-40;
         }
       }
+    }
+  }
+
+  .mobile-shell {
+    @apply hidden;
+  }
+
+  @media (max-width: 639px) {
+    .mobile-shell {
+      @apply block fixed inset-0 z-[2000] h-dvh w-dvw overflow-hidden bg-[#1d1d1f] text-white font-georama;
+    }
+
+    .mobile-home {
+      background-image: url('/images/wallpaper.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .mobile-status-bar {
+      @apply relative z-30 flex h-16 items-center justify-between px-7 text-sm font-semibold text-white;
+      text-shadow: 0 1px 12px rgb(0 0 0 / 0.35);
+    }
+
+    .mobile-status-bar time {
+      @apply relative z-10 min-w-16;
+    }
+
+    .mobile-dynamic-island {
+      @apply absolute left-1/2 top-3 h-9 w-44 -translate-x-1/2 rounded-full bg-black;
+    }
+
+    .mobile-status-icons {
+      @apply relative z-10 flex min-w-16 items-center justify-end gap-2.5;
+    }
+
+    .mobile-top-bar {
+      @apply relative z-20 grid h-16 grid-cols-[1fr_auto_1fr] items-center bg-[#1d1d1f] px-5;
+    }
+
+    .mobile-top-bar button {
+      @apply flex min-w-0 items-center gap-1 text-[15px] font-medium text-blue-500;
+    }
+
+    .mobile-top-bar h1 {
+      @apply max-w-[48vw] truncate text-center text-xl font-semibold text-white;
+    }
+
+    .mobile-body {
+      @apply relative z-10 h-[calc(100dvh-4rem)] overflow-y-auto px-5 pb-8;
+      scrollbar-width: none;
+    }
+
+    .mobile-body::-webkit-scrollbar {
+      display: none;
+    }
+
+    .mobile-body.has-top-bar {
+      @apply h-[calc(100dvh-8rem)];
+    }
+
+    .mobile-body.has-dock {
+      @apply pb-36;
+    }
+
+    .mobile-home-icons {
+      @apply grid w-fit grid-cols-2 gap-x-2 gap-y-8 px-6 pt-9;
+    }
+
+    .mobile-home-icons button {
+      @apply flex w-20 flex-col items-center gap-2.5 text-center text-sm font-semibold text-white;
+      text-shadow: 0 1px 8px rgb(0 0 0 / 0.45);
+    }
+
+    .mobile-home-icons img {
+      @apply size-[76px] object-contain;
+    }
+
+    .mobile-welcome {
+      @apply absolute left-1/2 top-[46%] w-full -translate-x-1/2 -translate-y-1/2 px-8 text-center text-white;
+      text-shadow: 0 2px 24px rgb(0 0 0 / 0.35);
+    }
+
+    .mobile-welcome p {
+      @apply text-[24px] font-thin leading-tight text-white/75;
+    }
+
+    .mobile-welcome h1 {
+      @apply mt-7 text-[64px] font-normal italic leading-none;
+    }
+
+    .mobile-dock {
+      @apply fixed bottom-9 left-1/2 z-40 flex w-[calc(100%-4rem)] max-w-[360px] -translate-x-1/2 items-center justify-between rounded-[26px] bg-white/20 px-5 py-3 backdrop-blur-md;
+      box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.18);
+    }
+
+    .mobile-dock button {
+      @apply flex size-[64px] items-center justify-center;
+    }
+
+    .mobile-dock img {
+      @apply size-[64px] object-contain;
+    }
+
+    .mobile-breadcrumbs {
+      @apply -mx-5 mb-7 flex h-12 items-center gap-2 overflow-x-auto bg-white/10 px-5 text-base font-medium text-blue-500;
+      scrollbar-width: none;
+    }
+
+    .mobile-breadcrumbs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .mobile-breadcrumbs span {
+      @apply flex flex-none items-center gap-2 whitespace-nowrap;
+    }
+
+    .mobile-breadcrumbs b {
+      @apply text-white/40;
+    }
+
+    .mobile-file-grid {
+      @apply grid grid-cols-3 gap-x-7 gap-y-8;
+    }
+
+    .mobile-file-grid.root {
+      @apply pt-10;
+    }
+
+    .mobile-file-grid button {
+      @apply flex w-full flex-col items-center gap-3 text-center;
+    }
+
+    .mobile-file-grid img {
+      @apply size-20 object-contain;
+    }
+
+    .mobile-file-grid span {
+      @apply line-clamp-2 min-h-10 max-w-24 break-words text-sm font-bold leading-tight text-white;
+    }
+
+    .mobile-terminal {
+      @apply bg-[#1d1d1f] px-1 py-7 font-roboto text-[16px] font-semibold leading-7 text-white;
+    }
+
+    .mobile-terminal > p {
+      @apply mb-8;
+    }
+
+    .mobile-terminal ul {
+      @apply space-y-6;
+    }
+
+    .mobile-terminal h2 {
+      @apply mb-2 flex items-center gap-3 text-base font-bold text-[#00a154];
+    }
+
+    .mobile-terminal li div {
+      @apply pl-8;
+    }
+
+    .mobile-contact {
+      @apply flex flex-col items-center bg-[#1d1d1f] px-3 py-5 text-center;
+    }
+
+    .mobile-contact > img {
+      @apply size-24 rounded-full object-cover;
+    }
+
+    .mobile-contact h2 {
+      @apply mt-7 text-2xl font-bold;
+    }
+
+    .mobile-contact > p {
+      @apply mt-6 max-w-sm text-xl font-medium leading-7;
+    }
+
+    .mobile-contact ul {
+      @apply mt-7 flex w-full flex-col gap-4;
+    }
+
+    .mobile-contact li {
+      @apply min-h-24 rounded-lg text-left;
+    }
+
+    .mobile-contact a {
+      @apply flex h-full flex-col justify-between p-4 text-white;
+    }
+
+    .mobile-contact a img {
+      @apply size-6;
+    }
+
+    .mobile-contact a span {
+      @apply text-base font-bold;
+    }
+
+    .mobile-blog-list {
+      @apply bg-[#1d1d1f] pb-36 pt-4;
+    }
+
+    .mobile-blog-list h2 {
+      @apply mb-10 text-2xl font-bold text-pink-600;
+    }
+
+    .mobile-blog-list article {
+      @apply mb-10 grid grid-cols-[64px_1fr] gap-5;
+    }
+
+    .mobile-blog-list article > img {
+      @apply mt-3 h-28 w-16 rounded-md object-contain;
+    }
+
+    .mobile-blog-list p {
+      @apply text-sm font-semibold text-white/80;
+    }
+
+    .mobile-blog-list h3 {
+      @apply mt-4 text-lg font-bold leading-7 text-white;
+    }
+
+    .mobile-blog-list a {
+      @apply mt-4 flex items-center gap-4 text-base font-semibold text-blue-500;
+    }
+
+    .mobile-safari-bar {
+      @apply fixed bottom-0 left-0 right-0 z-40 border-t border-white/10 bg-[#1d1d1f]/95 px-5 pb-8 pt-4 backdrop-blur-lg;
+    }
+
+    .mobile-safari-bar label {
+      @apply mb-5 flex h-12 items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 text-white/60;
+    }
+
+    .mobile-safari-bar input {
+      @apply min-w-0 flex-1 bg-transparent text-base font-medium outline-none placeholder:text-white/50;
+    }
+
+    .mobile-safari-bar div {
+      @apply flex items-center justify-between text-blue-500;
+    }
+
+    .mobile-safari-bar button {
+      @apply flex size-9 items-center justify-center;
+    }
+
+    .mobile-preview {
+      @apply flex min-h-full items-center justify-center bg-[#1d1d1f] py-10;
+    }
+
+    .mobile-preview img {
+      @apply w-full max-w-[90vw] object-contain;
+    }
+
+    .mobile-resume {
+      @apply min-h-full bg-[#1d1d1f] px-0 py-5;
+    }
+
+    .mobile-resume a {
+      @apply mb-4 ml-auto flex w-fit items-center gap-2 rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-blue-400;
+    }
+
+    .mobile-resume .react-pdf__Document {
+      @apply flex justify-center;
+    }
+
+    .mobile-resume .react-pdf__Page {
+      @apply overflow-hidden bg-white;
+    }
+
+    .mobile-text-file {
+      @apply min-h-full space-y-5 bg-[#1d1d1f] py-6 text-base leading-7 text-white/90;
+    }
+
+    .mobile-text-file img {
+      @apply w-full rounded-lg object-cover;
+    }
+
+    .mobile-text-file h2 {
+      @apply text-xl font-bold text-white;
+    }
+
+    .mobile-text-file h3 {
+      @apply text-xs font-bold uppercase tracking-[0.08em] text-white/50;
+    }
+
+    .mobile-gallery {
+      @apply grid grid-cols-2 gap-3 bg-[#1d1d1f] py-6;
+    }
+
+    .mobile-gallery img {
+      @apply aspect-square w-full rounded-lg object-cover;
     }
   }
 }
