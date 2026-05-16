@@ -1,16 +1,83 @@
-# React + Vite
+# macOS Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+macOS Portfolio is an interactive personal portfolio built as a desktop-inspired web experience. It recreates familiar operating-system patterns like a dock, draggable windows, file previews, folders, contact panels, a resume window, gallery views, and mobile-specific navigation.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The project is designed to make a portfolio feel exploratory instead of static. Visitors can open windows, browse project folders, read case-study style project notes, view images and PDFs, open contact links, and explore skills through a terminal-style window.
 
-## React Compiler
+The app also includes a dedicated mobile interface so the experience remains usable on smaller screens rather than simply shrinking the desktop layout.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- macOS-inspired desktop interface
+- Animated dock interactions with GSAP
+- Window state management with Zustand
+- Draggable and layered window UI
+- Finder-style project folders and files
+- Resume PDF viewer with React PDF
+- Safari/articles, gallery, contact, terminal, and text-file windows
+- Mobile-specific shell and navigation components
+- Theme and navigation utility tests
+- Portfolio content stored as structured constants
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React 19
+- Vite
+- JavaScript
+- GSAP
+- Zustand
+- Tailwind CSS
+- React PDF
+- Lucide React
+- Day.js
+- Node test runner
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+## Quality Checks
+
+```bash
+npm run lint
+npm run test
+npm run format:check
+npm run build
+```
+
+## Project Notes
+
+This project highlights frontend craft: motion, interaction design, state management, responsive adaptation, and a portfolio structure that feels more like a product than a flat page.
+
+## Author
+
+Built by [Sean Hoenderdos](https://github.com/seanhoenderdos).
