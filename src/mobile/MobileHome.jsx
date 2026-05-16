@@ -9,14 +9,14 @@ const homeApps = [
     label: 'Resume',
     title: 'Resume',
     screen: 'resume',
-    icon: '/images/pages.png',
+    icon: '/images/pages.webp',
   },
   {
     id: 'terminal',
     label: 'Skills',
     title: 'Terminal',
     screen: 'terminal',
-    icon: '/images/terminal.png',
+    icon: '/images/terminal.webp',
   },
 ]
 

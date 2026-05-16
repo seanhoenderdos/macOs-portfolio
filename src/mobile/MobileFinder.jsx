@@ -50,7 +50,7 @@ const MobileFinder = () => {
   }
 
   const getMobileIcon = (item) => {
-    if (item.kind === 'folder') return '/images/folder.png'
+    if (item.kind === 'folder') return '/images/folder.webp'
     return item.icon
   }
 

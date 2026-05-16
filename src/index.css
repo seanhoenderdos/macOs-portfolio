@@ -5,7 +5,7 @@
 :root,
 :root[data-theme='dark'] {
   color-scheme: dark;
-  --desktop-wallpaper: url('/images/wallpaper.png');
+  --desktop-wallpaper: url('/images/wallpaper.webp');
   --app-text: #f5f5f7;
   --app-text-muted: rgb(255 255 255 / 0.72);
   --menu-bg: rgb(255 255 255 / 0.5);
@@ -44,7 +44,7 @@
 
 :root[data-theme='light'] {
   color-scheme: light;
-  --desktop-wallpaper: url('/images/wallpaper.png');
+  --desktop-wallpaper: url('/images/wallpaper.webp');
   --app-text: #111827;
   --app-text-muted: rgb(15 23 42 / 0.72);
   --menu-bg: rgb(15 23 42 / 0.5);

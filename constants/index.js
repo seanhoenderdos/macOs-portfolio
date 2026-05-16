@@ -43,37 +43,37 @@ const dockApps = [
   {
     id: 'finder',
     name: 'Portfolio', // was "Finder"
-    icon: 'finder.png',
+    icon: 'finder.webp',
     canOpen: true,
   },
   {
     id: 'safari',
     name: 'Articles', // was "Safari"
-    icon: 'safari.png',
+    icon: 'safari.webp',
     canOpen: true,
   },
   {
     id: 'photos',
     name: 'Gallery', // was "Photos"
-    icon: 'photos.png',
+    icon: 'photos.webp',
     canOpen: true,
   },
   {
     id: 'contact',
     name: 'Contact', // or "Get in touch"
-    icon: 'contact.png',
+    icon: 'contact.webp',
     canOpen: true,
   },
   {
     id: 'terminal',
     name: 'Skills', // was "Terminal"
-    icon: 'terminal.png',
+    icon: 'terminal.webp',
     canOpen: true,
   },
   {
     id: 'trash',
     name: 'Archive', // was "Trash"
-    icon: 'trash.png',
+    icon: 'trash.webp',
     canOpen: true,
   },
 ]
@@ -89,7 +89,7 @@ const blogPosts = [
     kind: 'file',
     fileType: 'txt',
     subtitle: 'My Journey into Full-Stack Product Building',
-    image: '/images/blog1.png',
+    image: '/images/blog1.webp',
     description: uxDesignerToAiBuilderPost,
   },
   {
@@ -102,7 +102,7 @@ const blogPosts = [
     kind: 'file',
     fileType: 'txt',
     subtitle: 'Lessons from Creating an AI Sermon Workspace Tool',
-    image: '/images/lighted.png',
+    image: '/images/lighted.webp',
     description: buildingLightedPost,
   },
   {
@@ -114,7 +114,7 @@ const blogPosts = [
     kind: 'file',
     fileType: 'txt',
     subtitle: 'Designing, building, and automating with responsible speed',
-    image: '/images/blog3.png',
+    image: '/images/blog3.webp',
     description: aiToolsWorkflowPost,
   },
 ]
@@ -194,11 +194,11 @@ const photosLinks = [
 const gallery = [
   {
     id: 1,
-    img: '/images/sean.jpeg',
+    img: '/images/sean-photo.webp',
   },
   {
     id: 2,
-    img: '/images/sean-2.jpeg',
+    img: '/images/sean-2.webp',
   },
 ]
 
@@ -224,7 +224,7 @@ const WORK_LOCATION = {
     {
       id: 5,
       name: 'Pharmaceutical Website',
-      icon: '/images/folder.png',
+      icon: '/images/folder.webp',
       kind: 'folder',
       position: 'top-10 left-10', // icon position inside Finder
       windowPosition: 'top-[5vh] left-5', // optional: Finder window position
@@ -232,7 +232,7 @@ const WORK_LOCATION = {
         {
           id: 1,
           name: 'Shearon Pharmaceutical Website.txt',
-          icon: '/images/txt.png',
+          icon: '/images/txt.webp',
           kind: 'file',
           fileType: 'txt',
           position: 'top-5 left-10',
@@ -260,7 +260,7 @@ const WORK_LOCATION = {
         {
           id: 2,
           name: 'shearonpharma.co.za',
-          icon: '/images/safari.png',
+          icon: '/images/safari.webp',
           kind: 'file',
           fileType: 'url',
           href: 'https://shearonpharma.co.za',
@@ -269,7 +269,7 @@ const WORK_LOCATION = {
         {
           id: 4,
           name: 'Junior_Tummy Up_Single.png',
-          icon: '/images/image.png',
+          icon: '/images/image.webp',
           kind: 'file',
           fileType: 'img',
           position: 'top-48 left-10',
@@ -278,7 +278,7 @@ const WORK_LOCATION = {
         {
           id: 5,
           name: 'Adult_Energy_Single.png',
-          icon: '/images/image.png',
+          icon: '/images/image.webp',
           kind: 'file',
           fileType: 'img',
           position: 'top-48 left-[15rem]',
@@ -287,7 +287,7 @@ const WORK_LOCATION = {
         {
           id: 6,
           name: 'Adult_Sport_Single.png',
-          icon: '/images/image.png',
+          icon: '/images/image.webp',
           kind: 'file',
           fileType: 'img',
           position: 'top-48 left-[26rem]',
@@ -296,7 +296,7 @@ const WORK_LOCATION = {
         {
           id: 7,
           name: 'Adult_Tummy Down_Single.png',
-          icon: '/images/image.png',
+          icon: '/images/image.webp',
           kind: 'file',
           fileType: 'img',
           position: 'top-[20rem] left-10',
@@ -305,7 +305,7 @@ const WORK_LOCATION = {
         {
           id: 8,
           name: 'Adult_Tummy_Up_Single.png',
-          icon: '/images/image.png',
+          icon: '/images/image.webp',
           kind: 'file',
           fileType: 'img',
           position: 'top-[20rem] left-[15rem]',
@@ -314,7 +314,7 @@ const WORK_LOCATION = {
         {
           id: 9,
           name: 'Junior_Tummy Down_Single.png',
-          icon: '/images/image.png',
+          icon: '/images/image.webp',
           kind: 'file',
           fileType: 'img',
           position: 'top-[20rem] left-[26rem]',
@@ -323,7 +323,7 @@ const WORK_LOCATION = {
         {
           id: 10,
           name: 'Shearon-Logo.png',
-          icon: '/images/image.png',
+          icon: '/images/image.webp',
           kind: 'file',
           fileType: 'img',
           position: 'top-10 left-[15rem]',
@@ -336,7 +336,7 @@ const WORK_LOCATION = {
     {
       id: 6,
       name: 'Ai Sermon Workspace',
-      icon: '/images/folder.png',
+      icon: '/images/folder.webp',
       kind: 'folder',
       position: 'top-10 left-[13.5rem]',
       windowPosition: 'top-[20vh] left-7',
@@ -344,7 +344,7 @@ const WORK_LOCATION = {
         {
           id: 1,
           name: 'Ai Sermon Workspace Project.txt',
-          icon: '/images/txt.png',
+          icon: '/images/txt.webp',
           kind: 'file',
           fileType: 'txt',
           position: 'top-5 left-10',
@@ -384,7 +384,7 @@ const WORK_LOCATION = {
         {
           id: 2,
           name: 'lighted.life',
-          icon: '/images/safari.png',
+          icon: '/images/safari.webp',
           kind: 'file',
           fileType: 'url',
           href: 'https://www.lighted.life/',
@@ -393,11 +393,11 @@ const WORK_LOCATION = {
         {
           id: 4,
           name: 'lighted.png',
-          icon: '/images/image.png',
+          icon: '/images/image.webp',
           kind: 'file',
           fileType: 'img',
           position: 'top-5 left-[24.5rem]',
-          imageUrl: '/images/lighted.png',
+          imageUrl: '/images/lighted.webp',
         },
       ],
     },
@@ -406,7 +406,7 @@ const WORK_LOCATION = {
     {
       id: 7,
       name: 'Food Delivery App',
-      icon: '/images/folder.png',
+      icon: '/images/folder.webp',
       kind: 'folder',
       position: 'top-10 left-[24.5rem]',
       windowPosition: 'top-[33vh] left-7',
@@ -414,7 +414,7 @@ const WORK_LOCATION = {
         {
           id: 1,
           name: 'Food Delivery App Project.txt',
-          icon: '/images/txt.png',
+          icon: '/images/txt.webp',
           kind: 'file',
           fileType: 'txt',
           position: 'top-5 left-10',
@@ -428,7 +428,7 @@ const WORK_LOCATION = {
         {
           id: 2,
           name: 'food-delivery-app.com',
-          icon: '/images/safari.png',
+          icon: '/images/safari.webp',
           kind: 'file',
           fileType: 'url',
           href: 'https://seanhoenderdos-fooddelivery.expo.app',
@@ -437,16 +437,16 @@ const WORK_LOCATION = {
         {
           id: 4,
           name: 'food-delivery-app.png',
-          icon: '/images/image.png',
+          icon: '/images/image.webp',
           kind: 'file',
           fileType: 'img',
           position: 'top-5 left-[24.5rem]',
-          imageUrl: '/images/project-3.png',
+          imageUrl: '/images/project-3.webp',
         },
         {
           id: 3,
           name: 'food-delivery-app-design.fig',
-          icon: '/images/figma.png',
+          icon: '/images/figma.webp',
           kind: 'file',
           fileType: 'url',
           position: 'top-48 left-10',
@@ -467,30 +467,30 @@ const ABOUT_LOCATION = {
     {
       id: 1,
       name: 'me.png',
-      icon: '/images/image.png',
+      icon: '/images/image.webp',
       kind: 'file',
       fileType: 'img',
       position: 'top-5 left-10',
-      imageUrl: '/images/sean.jpeg',
+      imageUrl: '/images/sean-photo.webp',
     },
     {
       id: 2,
       name: 'remote-me.png',
-      icon: '/images/image.png',
+      icon: '/images/image.webp',
       kind: 'file',
       fileType: 'img',
       position: 'top-5 left-[13.5rem]',
-      imageUrl: '/images/sean-2.jpeg',
+      imageUrl: '/images/sean-2.webp',
     },
     {
       id: 4,
       name: 'about-me.txt',
-      icon: '/images/txt.png',
+      icon: '/images/txt.webp',
       kind: 'file',
       fileType: 'txt',
       position: 'top-5 left-[24.5rem]',
       subtitle: 'Meet the Developer Behind the Code',
-      image: '/images/sean.jpeg',
+      image: '/images/sean-photo.webp',
       previewStyle: 'avatar',
       description: [
         'Hey, I’m Sean 👋 I’m a developer and UI/UX engineer who loves building AI-powered apps, smooth web experiences, and useful automation tools.',
@@ -512,7 +512,7 @@ const RESUME_LOCATION = {
     {
       id: 1,
       name: 'Resume.pdf',
-      icon: '/images/pdf.png',
+      icon: '/images/pdf.webp',
       kind: 'file',
       fileType: 'pdf',
       // you can add `href` if you want to open a hosted resume
@@ -531,25 +531,25 @@ const TRASH_LOCATION = {
     {
       id: 1,
       name: 'trash1.png',
-      icon: '/images/image.png',
+      icon: '/images/image.webp',
       kind: 'file',
       fileType: 'img',
       position: 'top-5 left-10',
-      imageUrl: '/images/trash-1.png',
+      imageUrl: '/images/trash-1.webp',
     },
     {
       id: 2,
       name: 'trash2.png',
-      icon: '/images/image.png',
+      icon: '/images/image.webp',
       kind: 'file',
       fileType: 'img',
       position: 'top-5 left-[13.5rem]',
-      imageUrl: '/images/trash-2.png',
+      imageUrl: '/images/trash-2.webp',
     },
     {
       id: 3,
       name: '100%-manual-workflows.txt',
-      icon: '/images/txt.png',
+      icon: '/images/txt.webp',
       kind: 'file',
       fileType: 'txt',
       position: 'top-5 left-[23.5rem]',

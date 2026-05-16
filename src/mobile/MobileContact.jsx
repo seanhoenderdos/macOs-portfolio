@@ -3,7 +3,7 @@ import { socials } from '#constants'
 const MobileContact = () => {
   return (
     <div className="mobile-contact">
-      <img src="/images/sean.png" alt="Sean" />
+      <img src="/images/sean.webp" alt="Sean" />
       <h2>Let's Connect</h2>
       <p>Got an idea? A bug to squash? Or just wanna talk tech? I'm in.</p>
 
