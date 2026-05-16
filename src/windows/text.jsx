@@ -8,9 +8,12 @@ const Text = () => {
 
   if (!data) return null
 
-  const { name, image, imageUrl, subtitle, description = [] } = data
+  const { name, image, imageUrl, previewStyle, subtitle, description = [] } =
+    data
   const previewImage = image || imageUrl
   const sections = normalizeDescriptionSections(description)
+  const previewImageClass =
+    previewStyle === 'avatar' ? 'text-file-image avatar' : 'text-file-image'
 
   return (
     <>
@@ -24,7 +27,7 @@ const Text = () => {
           <img
             src={previewImage}
             alt={name}
-            className="w-full h-auto rounded-lg"
+            className={previewImageClass}
           />
         )}
 

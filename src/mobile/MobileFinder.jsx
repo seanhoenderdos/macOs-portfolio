@@ -24,9 +24,16 @@ const findLocationPath = (target, items = rootItems, parents = []) => {
 const MobileFinder = () => {
   const location = useMobileStore((state) => state.location)
   const openLocation = useMobileStore((state) => state.openLocation)
+  const openBreadcrumb = useMobileStore((state) => state.openBreadcrumb)
   const openFile = useMobileStore((state) => state.openFile)
   const items = location?.children ?? rootItems
-  const breadcrumbs = ['Portfolio', ...findLocationPath(location).map((item) => item.name)]
+  const breadcrumbs = [
+    { name: 'Portfolio', location: null },
+    ...findLocationPath(location).map((item) => ({
+      name: item.name,
+      location: item,
+    })),
+  ]
 
   const openItem = (item) => {
     if (item.kind === 'folder') {
@@ -51,8 +58,17 @@ const MobileFinder = () => {
     <>
       <div className="mobile-breadcrumbs" aria-label="Breadcrumb">
         {breadcrumbs.map((crumb, index) => (
-          <span key={`${crumb}-${index}`}>
-            {crumb}
+          <span key={`${crumb.name}-${index}`}>
+            {index < breadcrumbs.length - 1 ? (
+              <button
+                type="button"
+                onClick={() => openBreadcrumb(crumb.location)}
+              >
+                {crumb.name}
+              </button>
+            ) : (
+              <span aria-current="page">{crumb.name}</span>
+            )}
             {index < breadcrumbs.length - 1 && <b>/</b>}
           </span>
         ))}

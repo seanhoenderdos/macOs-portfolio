@@ -1,3 +1,7 @@
+import buildingLightedPost from './building-lighted-lessons-from-creating-an-ai-sermon-workspace-tool.md?raw'
+import uxDesignerToAiBuilderPost from './from-ux-designer-to-ai-product-builder.md?raw'
+import aiToolsWorkflowPost from './how-i-use-ai-tools-to-design-build-and-automate-faster.md?raw'
+
 const navLinks = [
   {
     id: 1,
@@ -70,32 +74,48 @@ const dockApps = [
     id: 'trash',
     name: 'Archive', // was "Trash"
     icon: 'trash.png',
-    canOpen: false,
+    canOpen: true,
   },
 ]
 
 const blogPosts = [
   {
     id: 1,
+    slug: 'from-ux-designer-to-ai-product-builder',
     date: 'Sep 2, 2025',
     title:
-      'TypeScript Explained: What It Is, Why It Matters, and How to Master It',
+      'From UX Designer to AI Product Builder: My Journey into Full-Stack Product Building',
+    name: 'From UX Designer to AI Product Builder.md',
+    kind: 'file',
+    fileType: 'txt',
+    subtitle: 'My Journey into Full-Stack Product Building',
     image: '/images/blog1.png',
-    link: 'blog-1-link',
+    description: uxDesignerToAiBuilderPost,
   },
   {
     id: 2,
+    slug: 'building-lighted-lessons-from-creating-an-ai-sermon-workspace-tool',
     date: 'Aug 28, 2025',
-    title: 'The Ultimate Guide to Mastering Three.js for 3D Development',
-    image: '/images/blog2.png',
-    link: 'blog-2-link',
+    title:
+      'Building Lighted: Lessons from Creating an AI Sermon Workspace Tool',
+    name: 'Building Lighted.md',
+    kind: 'file',
+    fileType: 'txt',
+    subtitle: 'Lessons from Creating an AI Sermon Workspace Tool',
+    image: '/images/lighted.png',
+    description: buildingLightedPost,
   },
   {
     id: 3,
+    slug: 'how-i-use-ai-tools-to-design-build-and-automate-faster',
     date: 'Aug 15, 2025',
-    title: 'The Ultimate Guide to Mastering GSAP Animations',
+    title: 'How I Use AI Tools to Design, Build, and Automate Faster',
+    name: 'How I Use AI Tools.md',
+    kind: 'file',
+    fileType: 'txt',
+    subtitle: 'Designing, building, and automating with responsible speed',
     image: '/images/blog3.png',
-    link: 'blog-3-link',
+    description: aiToolsWorkflowPost,
   },
 ]
 
@@ -174,19 +194,11 @@ const photosLinks = [
 const gallery = [
   {
     id: 1,
-    img: '/images/gal1.png',
+    img: '/images/sean.jpeg',
   },
   {
     id: 2,
-    img: '/images/gal2.png',
-  },
-  {
-    id: 3,
-    img: '/images/gal3.png',
-  },
-  {
-    id: 4,
-    img: '/images/gal4.png',
+    img: '/images/sean-2.jpeg',
   },
 ]
 
@@ -214,7 +226,7 @@ const WORK_LOCATION = {
       name: 'Pharmaceutical Website',
       icon: '/images/folder.png',
       kind: 'folder',
-      position: 'top-10 left-5', // icon position inside Finder
+      position: 'top-10 left-10', // icon position inside Finder
       windowPosition: 'top-[5vh] left-5', // optional: Finder window position
       children: [
         {
@@ -256,8 +268,8 @@ const WORK_LOCATION = {
         },
         {
           id: 4,
-          name: 'Junior_Tummy Up_Single.webp',
-          icon: '/images/Junior_Tummy Up_Single.webp',
+          name: 'Junior_Tummy Up_Single.png',
+          icon: '/images/image.png',
           kind: 'file',
           fileType: 'img',
           position: 'top-48 left-10',
@@ -265,8 +277,8 @@ const WORK_LOCATION = {
         },
         {
           id: 5,
-          name: 'Adult_Energy_Single.webp',
-          icon: '/images/Adult_Energy_Single.webp',
+          name: 'Adult_Energy_Single.png',
+          icon: '/images/image.png',
           kind: 'file',
           fileType: 'img',
           position: 'top-48 left-[15rem]',
@@ -274,8 +286,8 @@ const WORK_LOCATION = {
         },
         {
           id: 6,
-          name: 'Adult_Sport_Single.webp',
-          icon: '/images/Adult_Sport_Single.webp',
+          name: 'Adult_Sport_Single.png',
+          icon: '/images/image.png',
           kind: 'file',
           fileType: 'img',
           position: 'top-48 left-[26rem]',
@@ -283,8 +295,8 @@ const WORK_LOCATION = {
         },
         {
           id: 7,
-          name: 'Adult_Tummy Down_Single.webp',
-          icon: '/images/Adult_Tummy Down_Single.webp',
+          name: 'Adult_Tummy Down_Single.png',
+          icon: '/images/image.png',
           kind: 'file',
           fileType: 'img',
           position: 'top-[20rem] left-10',
@@ -292,8 +304,8 @@ const WORK_LOCATION = {
         },
         {
           id: 8,
-          name: 'Adult_Tummy_Up_Single.webp',
-          icon: '/images/Adult_Tummy_Up_Single.webp',
+          name: 'Adult_Tummy_Up_Single.png',
+          icon: '/images/image.png',
           kind: 'file',
           fileType: 'img',
           position: 'top-[20rem] left-[15rem]',
@@ -301,8 +313,8 @@ const WORK_LOCATION = {
         },
         {
           id: 9,
-          name: 'Junior_Tummy Down_Single.webp',
-          icon: '/images/Junior_Tummy Down_Single.webp',
+          name: 'Junior_Tummy Down_Single.png',
+          icon: '/images/image.png',
           kind: 'file',
           fileType: 'img',
           position: 'top-[20rem] left-[26rem]',
@@ -310,8 +322,8 @@ const WORK_LOCATION = {
         },
         {
           id: 10,
-          name: 'Shearon-Logo.svg',
-          icon: '/images/Shearon-Logo.svg',
+          name: 'Shearon-Logo.png',
+          icon: '/images/image.png',
           kind: 'file',
           fileType: 'img',
           position: 'top-10 left-[15rem]',
@@ -326,7 +338,7 @@ const WORK_LOCATION = {
       name: 'Ai Sermon Workspace',
       icon: '/images/folder.png',
       kind: 'folder',
-      position: 'top-52 right-80',
+      position: 'top-10 left-[13.5rem]',
       windowPosition: 'top-[20vh] left-7',
       children: [
         {
@@ -335,7 +347,7 @@ const WORK_LOCATION = {
           icon: '/images/txt.png',
           kind: 'file',
           fileType: 'txt',
-          position: 'top-5 right-10',
+          position: 'top-5 left-10',
           description: [
             {
               title: 'Intro',
@@ -376,7 +388,7 @@ const WORK_LOCATION = {
           kind: 'file',
           fileType: 'url',
           href: 'https://www.lighted.life/',
-          position: 'top-20 left-20',
+          position: 'top-5 left-[13.5rem]',
         },
         {
           id: 4,
@@ -384,7 +396,7 @@ const WORK_LOCATION = {
           icon: '/images/image.png',
           kind: 'file',
           fileType: 'img',
-          position: 'top-52 left-80',
+          position: 'top-5 left-[24.5rem]',
           imageUrl: '/images/lighted.png',
         },
       ],
@@ -396,7 +408,7 @@ const WORK_LOCATION = {
       name: 'Food Delivery App',
       icon: '/images/folder.png',
       kind: 'folder',
-      position: 'top-10 left-80',
+      position: 'top-10 left-[24.5rem]',
       windowPosition: 'top-[33vh] left-7',
       children: [
         {
@@ -407,10 +419,10 @@ const WORK_LOCATION = {
           fileType: 'txt',
           position: 'top-5 left-10',
           description: [
-            'Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.',
-            'Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.',
-            'Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.',
-            'It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.',
+            'This Food Delivery App is a React Native and Expo project I built to keep improving my mobile development skills.',
+            'The app simulates a modern food ordering experience where users can browse meals, view item details, customize orders, and manage a cart.',
+            'It helped me stay up to date with React Native patterns, Expo Router, reusable components, mobile UI design, and state management.',
+            'The goal was to build something practical and polished while continuing to upskill in cross-platform app development for iOS, Android, and web.',
           ],
         },
         {
@@ -419,8 +431,8 @@ const WORK_LOCATION = {
           icon: '/images/safari.png',
           kind: 'file',
           fileType: 'url',
-          href: 'paste-your-app-link-here.com',
-          position: 'top-10 right-20',
+          href: 'https://seanhoenderdos-fooddelivery.expo.app',
+          position: 'top-5 left-[13.5rem]',
         },
         {
           id: 4,
@@ -428,17 +440,17 @@ const WORK_LOCATION = {
           icon: '/images/image.png',
           kind: 'file',
           fileType: 'img',
-          position: 'top-52 right-80',
+          position: 'top-5 left-[24.5rem]',
           imageUrl: '/images/project-3.png',
         },
         {
-          id: 5,
-          name: 'Design.fig',
-          icon: '/images/plain.png',
+          id: 3,
+          name: 'food-delivery-app-design.fig',
+          icon: '/images/figma.png',
           kind: 'file',
-          fileType: 'fig',
-          href: 'https://google.com',
-          position: 'top-60 right-20',
+          fileType: 'url',
+          position: 'top-48 left-10',
+          href: 'https://www.figma.com/design/Dqi0kRS5oTDrg1xO4xwBMY/Food-Delivery-App?node-id=0-1&t=BKEdkU4aFcUsuFtt-1',
         },
       ],
     },
@@ -458,26 +470,17 @@ const ABOUT_LOCATION = {
       icon: '/images/image.png',
       kind: 'file',
       fileType: 'img',
-      position: 'top-10 left-5',
-      imageUrl: '/images/sean.jpg',
+      position: 'top-5 left-10',
+      imageUrl: '/images/sean.jpeg',
     },
     {
       id: 2,
-      name: 'casual-me.png',
+      name: 'remote-me.png',
       icon: '/images/image.png',
       kind: 'file',
       fileType: 'img',
-      position: 'top-28 right-72',
-      imageUrl: '/images/sean-2.jpg',
-    },
-    {
-      id: 3,
-      name: 'conference-me.png',
-      icon: '/images/image.png',
-      kind: 'file',
-      fileType: 'img',
-      position: 'top-52 left-80',
-      imageUrl: '/images/sean-3.jpeg',
+      position: 'top-5 left-[13.5rem]',
+      imageUrl: '/images/sean-2.jpeg',
     },
     {
       id: 4,
@@ -485,9 +488,10 @@ const ABOUT_LOCATION = {
       icon: '/images/txt.png',
       kind: 'file',
       fileType: 'txt',
-      position: 'top-60 left-5',
+      position: 'top-5 left-[24.5rem]',
       subtitle: 'Meet the Developer Behind the Code',
-      image: '/images/sean.jpg',
+      image: '/images/sean.jpeg',
+      previewStyle: 'avatar',
       description: [
         'Hey, I’m Sean 👋 I’m a developer and UI/UX engineer who loves building AI-powered apps, smooth web experiences, and useful automation tools.',
         'I work with Next.js, TypeScript, and React Native to turn ideas into products that feel clean, fast, and genuinely helpful 🚀',
@@ -530,7 +534,7 @@ const TRASH_LOCATION = {
       icon: '/images/image.png',
       kind: 'file',
       fileType: 'img',
-      position: 'top-10 left-10',
+      position: 'top-5 left-10',
       imageUrl: '/images/trash-1.png',
     },
     {
@@ -539,8 +543,16 @@ const TRASH_LOCATION = {
       icon: '/images/image.png',
       kind: 'file',
       fileType: 'img',
-      position: 'top-40 left-80',
+      position: 'top-5 left-[13.5rem]',
       imageUrl: '/images/trash-2.png',
+    },
+    {
+      id: 3,
+      name: '100%-manual-workflows.txt',
+      icon: '/images/txt.png',
+      kind: 'file',
+      fileType: 'txt',
+      position: 'top-5 left-[23.5rem]',
     },
   ],
 }

@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav>
       <div>
-        <img src="/images/logo.svg" alt="logo" />
+        <img src="/images/logo.svg" alt="logo" className="nav-logo" />
         <p className="font-bold">Sean's Portfolio</p>
 
         <ul>
@@ -32,15 +32,17 @@ const Navbar = () => {
               {id === 4 ? (
                 <button
                   type="button"
-                  className="theme-toggle"
+                  className="nav-icon-button theme-toggle"
                   onClick={toggleTheme}
                   aria-label={`Switch to ${nextTheme} mode`}
                   aria-pressed={theme === 'dark'}
                 >
-                  <img src={img} className="icon-hover" alt="" />
+                  <img src={img} alt="" />
                 </button>
               ) : (
-                <img src={img} className="icon-hover" alt={`icon-${id}`} />
+                <span className="nav-icon-button" aria-hidden="true">
+                  <img src={img} alt="" />
+                </span>
               )}
             </li>
           ))}

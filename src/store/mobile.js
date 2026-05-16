@@ -5,6 +5,7 @@ import {
   createInitialMobileState,
   mobileBack,
   mobileOpenApp,
+  mobileOpenBreadcrumb,
   mobileOpenFile,
   mobileOpenLocation,
 } from '../mobile/navigation'
@@ -29,6 +30,11 @@ const useMobileStore = create(
     openLocation: (location) =>
       set((state) => {
         replaceState(state, mobileOpenLocation(state, location))
+      }),
+
+    openBreadcrumb: (location) =>
+      set((state) => {
+        replaceState(state, mobileOpenBreadcrumb(state, location))
       }),
 
     openFile: (file) =>

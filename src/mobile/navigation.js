@@ -20,6 +20,12 @@ const pushState = (state, next) => ({
   history: [...state.history, snapshot(state)],
 })
 
+const isSameLocation = (left, right) => {
+  if (!left || !right) return left === right
+
+  return left.id === right.id && left.name === right.name
+}
+
 export const mobileOpenApp = (state, screen, title, options = {}) =>
   pushState(state, {
     screen,
@@ -35,6 +41,32 @@ export const mobileOpenLocation = (state, location) =>
     location: location ?? null,
     file: null,
   })
+
+export const mobileOpenBreadcrumb = (state, location) => {
+  const title = location?.name ?? 'Portfolio'
+  const historyIndex = state.history.findIndex(
+    (entry) =>
+      entry.screen === 'finder' &&
+      entry.title === title &&
+      isSameLocation(entry.location, location ?? null),
+  )
+
+  if (historyIndex === -1) {
+    return {
+      ...state,
+      screen: 'finder',
+      title,
+      location: location ?? null,
+      file: null,
+    }
+  }
+
+  return {
+    ...state.history[historyIndex],
+    file: null,
+    history: state.history.slice(0, historyIndex),
+  }
+}
 
 export const mobileOpenFile = (state, file) => {
   const screenByType = {

@@ -10,22 +10,25 @@ import {
 } from 'lucide-react'
 
 import { blogPosts } from '#constants'
+import useMobileStore from '#store/mobile'
 
 const MobileSafari = () => {
+  const openFile = useMobileStore((state) => state.openFile)
+
   return (
     <div className="mobile-safari">
       <section className="mobile-blog-list">
         <h2>My Developer Blog</h2>
 
-        {blogPosts.map(({ id, title, image, link, date }) => (
-          <article key={id}>
-            <img src={image} alt={title} />
+        {blogPosts.map((post) => (
+          <article key={post.id}>
+            <img src={post.image} alt={post.title} />
             <div>
-              <p>{date}</p>
-              <h3>{title}</h3>
-              <a href={link} target="_blank" rel="noopener noreferrer">
+              <p>{post.date}</p>
+              <h3>{post.title}</h3>
+              <button type="button" onClick={() => openFile(post)}>
                 Check out the full post <MoveRight size={26} />
-              </a>
+              </button>
             </div>
           </article>
         ))}
